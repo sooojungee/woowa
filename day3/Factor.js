@@ -5,12 +5,12 @@ function isFactor(number, potentialFactor) {
 function factors(number) {
     const factorSet = new Set();
     for (let pod = 1; pod <= Math.sqrt(number); pod++) {
-        if (isFactor(pod)) {
+        if (isFactor(number, pod)) {
             factorSet.add(pod);
             factorSet.add(number/pod);
         }
     }
-    return factorSet;
+    return Array.from(factorSet);
 }
 
-module.export = factors;
+module.exports = {factors};
