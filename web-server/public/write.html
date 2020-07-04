@@ -1,11 +1,17 @@
+<!doctype html>
 <html>
+    <head>
+        <meta charset="utf-8">
+    </head>
     <body>
         <div class="write-area">
             <h2>memo</h2>
-                <form>
-                    <p><textarea cols="50" rows="10"></textarea></p>
+                <form method="post" action="/data" target="iframe1">
+                    <p><textarea cols="50" rows="10" name="memo"></textarea></p>
                     <p><input type="submit" value="Submit"></p>
                 </form>
+                <iframe name="iframe1" style="display:none;"></iframe>
+
         </div>
     </body>
     <style>
